@@ -1,4 +1,4 @@
-const eq = require('../src/eq');
+import eq from '../src/eq';
 
 test('Equality', async () => {
     expect(eq(5, 5)).toBeTruthy();

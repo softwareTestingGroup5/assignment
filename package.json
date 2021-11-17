@@ -10,6 +10,8 @@
   "author": "",
   "license": "MIT",
   "devDependencies": {
-    "jest": "^27.3.1"
+    "@babel/plugin-transform-modules-commonjs": "^7.16.0",
+    "jest": "^27.3.1",
+    "jest-chain": "^1.1.5"
   }
 }
