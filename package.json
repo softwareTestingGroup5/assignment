@@ -5,13 +5,19 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "test": "jest"
+    "test": "jest --coverage"
   },
   "author": "",
   "license": "MIT",
   "devDependencies": {
     "@babel/plugin-transform-modules-commonjs": "^7.16.0",
-    "jest": "^27.3.1",
-    "jest-chain": "^1.1.5"
+    "jest": "^27.3.1"
+  },
+  "jest": {
+    "coverageProvider": "v8",
+    "coveragePathIgnorePatterns": [
+      "node_modules",
+      ".internal"
+    ]
   }
 }
