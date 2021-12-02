@@ -1,18 +1,29 @@
 import capitalize from '../src/capitalize.js';
 
-test('Trivial word', async () => {
-    expect(capitalize('Test')).toBe('Test');
-    expect(capitalize('test')).toBe('Test');
-    expect(capitalize('TEST')).toBe('Test');
-    expect(capitalize('tEST')).toBe('Test');
+test('Already capitalized', async () => {
+    expect(capitalize('Test')).toStrictEqual('Test');
 })
 
-test('Special cases', async () => {
-    expect(capitalize('1est')).toBe('1est');
-    expect(capitalize('_est')).toBe('_est');
-    expect(capitalize('')).toBe('');
-    expect(capitalize('test case')).toBe('Test case');
-    expect(capitalize('12345')).toBe('12345');
-    expect(capitalize('a')).toBe('A');
-    expect(capitalize('A')).toBe('A');
+test('Lowercase word', async () => {
+    expect(capitalize('test')).toStrictEqual('Test');
+})
+
+test('Uppercase word', async () => {
+    expect(capitalize('TEST')).toStrictEqual('Test');
+})
+
+test('First is special character', async () => {
+    expect(capitalize('_est')).toStrictEqual('_est');
+})
+
+test('First is number', async () => {
+    expect(capitalize('1est')).toStrictEqual('1est');
+})
+
+test('Empty string', async () => {
+    expect(capitalize('')).toStrictEqual('');
+})
+
+test('First is whitespace', async () => {
+    expect(capitalize(' est')).toStrictEqual(' est');
 })
