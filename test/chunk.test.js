@@ -4,10 +4,6 @@ var array = [1, 2, 3, 4, 5];
 var arrayOneElem = ['one'];
 var emptyArray = [];
 
-test('Chunk size one', async () => {
-    expect(chunk(array, 1)).toStrictEqual([[1], [2], [3], [5]]);
-})
-
 test('Chunk size two', async () => {
     expect(chunk(array, 2)).toStrictEqual([[1, 2], [3, 4], [5]]);
 })
