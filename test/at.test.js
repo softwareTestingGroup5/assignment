@@ -16,5 +16,5 @@ test('Invalid path', async () => {
 
 const emptyObject = {};
 test('Empty object', async () => {
-    expect(at(emptyObject, ['a'])).toBe([undefined]);
+    expect(at(emptyObject, ['a'])).toStrictEqual([undefined]);
 })

@@ -11,13 +11,20 @@
   "license": "MIT",
   "devDependencies": {
     "@babel/plugin-transform-modules-commonjs": "^7.16.0",
-    "jest": "^27.3.1"
+    "jest": "^27.3.1",
+    "jest-html-reporter": "^3.4.2"
   },
   "jest": {
     "coverageProvider": "v8",
     "coveragePathIgnorePatterns": [
       "node_modules",
       ".internal"
+    ],
+    "reporters": [
+      "default",
+      ["./node_modules/jest-html-reporter", {
+        "pageTitle": "Test Report"
+      }]
     ]
   }
 }
